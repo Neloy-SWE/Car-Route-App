@@ -3,7 +3,10 @@ Created by Neloy on 09 October, 2025.
 Email: taufiqneloy.swe@gmail.com
 */
 
+import 'dart:async';
+
 import 'package:car_route_app/utilities/app_text.dart';
+import 'package:car_route_app/view/screen/screen_map.dart';
 import 'package:flutter/material.dart';
 
 class ScreenSplash extends StatefulWidget {
@@ -14,6 +17,17 @@ class ScreenSplash extends StatefulWidget {
 }
 
 class _ScreenSplashState extends State<ScreenSplash> {
+
+  @override
+  void initState() {
+    Timer(const Duration(seconds: 2), () {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (builder) => const ScreenMap()),
+      );
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

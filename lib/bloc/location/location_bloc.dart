@@ -3,11 +3,12 @@ Created by Neloy on 10 October, 2025.
 Email: taufiqneloy.swe@gmail.com
 */
 
+import 'package:car_route_app/utilities/app_constant.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:latlong2/latlong.dart' as lat_long;
 
-import '../../view/use_case/use_case_location_point.dart';
+import '../../use_case/use_case_location_point.dart';
 
 part 'location_event.dart';
 
@@ -25,10 +26,16 @@ class LocationBloc extends Bloc<LocationEvent, LocationState> {
   ) {
     final currentState = state;
     if (currentState is LocationInitial) {
-      final origin = UseCaseLocationPoint(latLng: event.position);
+      final origin = UseCaseLocationPoint(
+        latLng: event.position,
+        pointName: AppConstant.origin,
+      );
       emit(LocationOriginSelected(origin: origin));
     } else if (currentState is LocationOriginSelected) {
-      final destination = UseCaseLocationPoint(latLng: event.position);
+      final destination = UseCaseLocationPoint(
+        latLng: event.position,
+        pointName: AppConstant.destination,
+      );
       emit(
         LocationDestinationSelected(
           origin: currentState.origin,

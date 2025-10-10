@@ -8,9 +8,10 @@ import 'package:latlong2/latlong.dart' as lat_long;
 
 class UseCaseLocationPoint extends Equatable {
   final lat_long.LatLng latLng;
+  final String pointName;
 
-  const UseCaseLocationPoint({required this.latLng});
+  const UseCaseLocationPoint({required this.latLng, required this.pointName});
 
   @override
-  List<Object> get props => [latLng];
+  List<Object> get props => [latLng, pointName];
 }
