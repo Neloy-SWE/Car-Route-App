@@ -19,6 +19,9 @@ A simple mobile app to estimate distance, time and find best path to travel via 
     - flutter_map: ^8.2.2
 5. latitude and longitude calculation:
     - latlong2: ^0.9.1
+6. testing:
+    - bloc_test: ^10.0.0
+    - mocktail: ^1.0.4
 
 ## Installation:
 
