@@ -118,3 +118,6 @@ user can also find the distance between two points and estimated time to reach d
 2. implementation of generate route for more vehicle like bike, train, plane. walking route as well as.
 
 3. implementation of offline map.
+
+### Contact:
+For further implementation feel free to reach out at: taufiqneloy.swe@gmail.com
