@@ -81,7 +81,6 @@ void main() {
       act: (bloc) => bloc.add(LocationResetEvent()),
       expect: () => [LocationInitial()],
     );
-
     blocTest<LocationBloc, LocationState>(
       "reset from destination",
       seed:
