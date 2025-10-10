@@ -11,5 +11,5 @@ class AppConstant {
   static const List<String> subdomains = ["a", "b", "c"];
   static const double defaultLat = 23.79843409360955;
   static const double defaultLong = 90.43531819831415;
-  static const double initialZoom = 13;
+  static const double initialZoom = 12;
 }

@@ -5,6 +5,7 @@ Email: taufiqneloy.swe@gmail.com
 
 import 'dart:async';
 
+import 'package:car_route_app/utilities/app_color.dart';
 import 'package:car_route_app/utilities/app_text.dart';
 import 'package:car_route_app/view/screen/screen_map.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,7 @@ class _ScreenSplashState extends State<ScreenSplash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.colorPrimary,
       appBar: AppBar(title: Text(AppText.welcome)),
       body: SafeArea(
         child: Center(

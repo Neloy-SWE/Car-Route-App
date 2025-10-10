@@ -11,7 +11,7 @@ import 'app_font.dart';
 
 class AppTheme {
   static final get = ThemeData(
-    scaffoldBackgroundColor: AppColor.colorPrimary,
+    scaffoldBackgroundColor: Colors.white,
     appBarTheme: const AppBarTheme(
       elevation: 0,
       color: AppColor.colorPrimary,

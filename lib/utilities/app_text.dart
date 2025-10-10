@@ -15,4 +15,5 @@ class AppText {
   static const String distanceColon = "Distance: ";
   static const String timeColon = "Time: ";
   static const String fetchingRouteDot = "Fetching route...";
+  static const String pleaseTurnOnInternet = "Please turn on internet.";
 }
