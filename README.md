@@ -42,7 +42,12 @@ To run this project locally, follow these steps:
   flutter pub get
 ```
 
-4. **Run the application**:
+4. **Run test**:
+  ```bash
+  flutter test
+```
+
+5. **Run the application**:
   ```bash
   flutter run
 ```
