@@ -3,7 +3,7 @@ Created by Neloy on 10 October, 2025.
 Email: taufiqneloy.swe@gmail.com
 */
 
-import 'dart:async';
+// import 'dart:async';
 
 import 'package:car_route_app/network/api/direction/api_call_get_direction.dart';
 import 'package:car_route_app/network/configuration/configuration_network.dart';
@@ -13,7 +13,7 @@ import 'package:car_route_app/utilities/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
+// import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 import 'package:latlong2/latlong.dart' as lat_long;
 
 import '../../bloc/location/location_bloc.dart';
@@ -42,28 +42,27 @@ class _MapScreenState extends State<ScreenMap> {
   bool isShowInstruction = true;
   bool isConnectedInternet = true;
 
-  late StreamSubscription<InternetStatus> _internetSubscription;
+  // late StreamSubscription<InternetStatus> _internetSubscription;
 
 
   @override
   void initState() {
     super.initState();
-
-    _internetSubscription = InternetConnection().onStatusChange.listen(
-          (InternetStatus status) {
-        setState(() {
-          isConnectedInternet = status == InternetStatus.connected;
-        });
-        if (!isConnectedInternet) {
-          _showError(AppText.pleaseTurnOnInternet);
-        }else{
-          final currentZoom = _mapController.camera.zoom;
-          final currentCenter = _mapController.camera.center;
-          _mapController.move(currentCenter, currentZoom + 1);
-          _reset();
-        }
-      },
-    );
+    // _internetSubscription = InternetConnection().onStatusChange.listen(
+    //       (InternetStatus status) {
+    //     setState(() {
+    //       isConnectedInternet = status == InternetStatus.connected;
+    //     });
+    //     if (!isConnectedInternet) {
+    //       _showError(AppText.pleaseTurnOnInternet);
+    //     }else{
+    //       final currentZoom = _mapController.camera.zoom;
+    //       final currentCenter = _mapController.camera.center;
+    //       _mapController.move(currentCenter, currentZoom + 1);
+    //       _reset();
+    //     }
+    //   },
+    // );
 
     ConfigurationNetwork network = ConfigurationNetwork();
     IApiCallGetDirection apiCallGetDirection = ApiCallGetDirection(
@@ -350,7 +349,7 @@ class _MapScreenState extends State<ScreenMap> {
 
   @override
   void dispose() {
-    _internetSubscription.cancel();
+    // _internetSubscription.cancel();
     _locationBloc.close();
     _routeBloc.close();
     super.dispose();
